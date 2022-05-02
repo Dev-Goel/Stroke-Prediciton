@@ -70,7 +70,7 @@ def main():
     else:
         Residence_type = 1
 
-    avg_glucose_level = st.number_input('Average Glucose Level')
+    avg_glucose_level = st.slider('Average Glucose Level', 0, 200)
     avg_glucose_level = (avg_glucose_level-106.14767710371795)/(45.27912905705893)
 
     bmi = st.number_input('BMI')
