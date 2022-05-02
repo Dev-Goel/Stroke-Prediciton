@@ -32,8 +32,10 @@ def main():
     ever_married = st.text_input('Ever Married')
     work_type = st.text_input('Work Type')
     Residence_type = st.text_input('Residence Type')
-    avg_glucose_level = st.text_input('Average Glucose Level')
-    bmi = st.text_input('BMI')
+    avg_glucose_level = st.number_input('Average Glucose Level')
+    avg_glucose_level = (avg_glucose_level-106.14767710371795)/(45.27912905705893)
+    bmi = st.number_input('BMI')
+    bmi = (bmi-28.90337865973328)/(7.698534094073452)
     smoking_status = st.text_input('Smoking Status')
 
     diagnosis = ''
