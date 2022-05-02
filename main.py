@@ -12,17 +12,17 @@ def stroke_prediction(input_data):
     # reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
 
-    prediction = loaded_model.predict(input_data_reshaped)
-    print(prediction)
-
-    if (prediction[0] == 0):
-        return 'The person does not have a stroke'
-    else:
-        return 'The person have a stroke'
+    prediction = loaded_model.predict_proba(input_data_reshaped)[1]
+    # print(prediction*100)
+    return f'You have {prediction*100}% chance of having a stroke.'
+    # if (prediction[0] == 0):
+    #     return 'The person does not have a stroke'
+    # else:
+    #     return 'The person have a stroke'
 
 def main():
     st.title('Heart Stroke Prediction')
-        
+
     gender = st.radio("Gender",('Male', 'Female', 'Other'))
     if(gender == 'Male'):
         gender = 1
