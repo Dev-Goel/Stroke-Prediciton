@@ -31,7 +31,7 @@ def main():
     else:
         gender = 2
 
-    age = st.number_input('Age')
+    age = st.slider('Age', 1, 120)
     age = (age-43.22661448140902)/(22.61043402711303)
 
     hypertension = st.radio("Hypertension",('Yes', 'No'))
