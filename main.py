@@ -24,7 +24,13 @@ def main():
     st.title('Heart Stroke Prediction')
     #gender	age	hypertension	heart_disease	ever_married	work_type	Residence_type	avg_glucose_level	bmi	smoking_status
     
-    gender = st.radio("Gender",(0, 1, 2))
+    gender = st.radio("Gender",('Male', 'Female', 'Other'))
+    if(gender == 'Male'):
+        gender = 0
+    elif(gender == 'Female'):
+        gender = 1
+    else:
+        gender = 2
     age = st.number_input('Age')
     age = (age-43.22661448140902)/(22.61043402711303)
     hypertension = st.text_input('Hypertension')
