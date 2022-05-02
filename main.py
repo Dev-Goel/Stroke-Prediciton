@@ -22,8 +22,7 @@ def stroke_prediction(input_data):
 
 def main():
     st.title('Heart Stroke Prediction')
-    #gender	age	hypertension	heart_disease	ever_married	work_type	Residence_type	avg_glucose_level	bmi	smoking_status
-    
+        
     gender = st.radio("Gender",('Male', 'Female', 'Other'))
     if(gender == 'Male'):
         gender = 1
@@ -46,15 +45,46 @@ def main():
         heart_disease = 1
     else:
         heart_disease = 0
-        
-    ever_married = st.text_input('Ever Married')
-    work_type = st.text_input('Work Type')
-    Residence_type = st.text_input('Residence Type')
+
+    ever_married = st.radio("Ever Married",('Yes', 'No'))
+    if(ever_married == 'Yes'):
+        ever_married = 1
+    else:
+        ever_married = 0
+
+    work_type = st.radio("Work Type",('Government Job', 'Never Worked', 'Private', 'Self-employed', 'Children'))
+    if(work_type == 'Government Job'):
+        work_type = 0
+    elif(work_type == 'Never Worked'):
+        work_type = 1
+    elif(work_type == 'Private'):
+        work_type = 2
+    elif(work_type == 'Self-employed'):
+        work_type = 3
+    else:
+        work_type = 4
+    
+    Residence_type = st.radio("Residence Type",('Rural', 'Urban'))
+    if(Residence_type == "Rural"):
+        Residence_type = 0
+    else:
+        Residence_type = 1
+
     avg_glucose_level = st.number_input('Average Glucose Level')
     avg_glucose_level = (avg_glucose_level-106.14767710371795)/(45.27912905705893)
+
     bmi = st.number_input('BMI')
     bmi = (bmi-28.90337865973328)/(7.698534094073452)
-    smoking_status = st.text_input('Smoking Status')
+
+    smoking_status = st.radio("Smoking Status",('Formerly Smoked', 'Never Smoked', 'Smokes', 'Unknown'))
+    if(smoking_status == "Formerly Smoked"):
+        smoking_status = 1
+    elif(smoking_status == "Never Smoked"):
+        smoking_status = 2
+    elif(smoking_status == "Smokes"):
+        smoking_status = 3
+    else:
+        smoking_status = 0
 
     diagnosis = ''
 
