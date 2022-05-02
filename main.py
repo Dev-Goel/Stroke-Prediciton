@@ -25,7 +25,8 @@ def main():
     #gender	age	hypertension	heart_disease	ever_married	work_type	Residence_type	avg_glucose_level	bmi	smoking_status
     
     gender = st.radio("Gender",(0, 1, 2))
-    age = st.text_input('Age')
+    age = st.number_input('Age')
+    age = (age-43.22661448140902)/(22.61043402711303)
     hypertension = st.text_input('Hypertension')
     heart_disease = st.text_input('Heart Disease')
     ever_married = st.text_input('Ever Married')
