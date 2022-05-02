@@ -26,15 +26,27 @@ def main():
     
     gender = st.radio("Gender",('Male', 'Female', 'Other'))
     if(gender == 'Male'):
-        gender = 0
-    elif(gender == 'Female'):
         gender = 1
+    elif(gender == 'Female'):
+        gender = 0
     else:
         gender = 2
+
     age = st.number_input('Age')
     age = (age-43.22661448140902)/(22.61043402711303)
-    hypertension = st.text_input('Hypertension')
-    heart_disease = st.text_input('Heart Disease')
+
+    hypertension = st.radio("Hypertension",('Yes', 'No'))
+    if(hypertension == 'Yes'):
+        hypertension = 1
+    else:
+        hypertension = 0
+
+    heart_disease = st.radio("Heart Disease",('Yes', 'No'))
+    if(heart_disease == 'Yes'):
+        heart_disease = 1
+    else:
+        heart_disease = 0
+        
     ever_married = st.text_input('Ever Married')
     work_type = st.text_input('Work Type')
     Residence_type = st.text_input('Residence Type')
