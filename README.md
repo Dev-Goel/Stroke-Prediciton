@@ -1,5 +1,5 @@
 # [Pattern Recognition and Machine Learning-CSL2050 Course Project](https://share.streamlit.io/dev-goel/stroke-prediction/main/main.py)
-[![Open In Colab](https://github.com/Dev-Goel/Stroke-Prediction/blob/main/PRML%20Course%20Project%20Code.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Dev-Goel/Stroke-Prediction/blob/main/PRML%20Course%20Project%20Code.ipynb)
 
 _Course Instructor: Dr. Richa Singh_
 
