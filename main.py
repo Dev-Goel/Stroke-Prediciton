@@ -23,7 +23,7 @@ def stroke_prediction(input_data):
 def main():
     st.title('Heart Stroke Prediction')
 
-    gender = st.radio("Gender",('Male', 'Female', 'Other'))
+    gender = st.radio("Gender",('Male', 'Female', 'Others'))
     if(gender == 'Male'):
         gender = 1
     elif(gender == 'Female'):
