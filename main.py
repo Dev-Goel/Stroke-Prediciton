@@ -21,7 +21,7 @@ def stroke_prediction(input_data):
 def main():
     st.title('Heart Stroke Prediction')
 
-    image = Image.open('assets\GettyImages-944106494.jpg')
+    image = Image.open('assets/GettyImages-944106494.jpg')
     st.image(image, caption='Heart Stroke Prediction')
     st.write("""
     The World Health Organization (WHO) identifies strokes as the second leading cause of death globally. A stroke happens when a person’s blood supply to their brain is interrupted or reduced, causing brain cells to die within minutes. It prevents the brain tissue from getting the oxygen and nutrients that it needs and is responsible for approximately 11% of total deaths.
