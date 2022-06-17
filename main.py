@@ -19,14 +19,14 @@ def stroke_prediction(input_data):
     return prediction_proba, prediction*100
 
 def main():
-    st.title('Heart Stroke Prediction')
+    st.title('Stroke Prediction')
 
-    image = Image.open('assets/GettyImages-944106494.jpg')
-    st.image(image, caption='Heart Stroke Prediction')
+    image = Image.open('assets/87343087.jpg')
+    st.image(image, caption='Stroke Prediction')
     st.write("""
     The World Health Organization (WHO) identifies strokes as the second leading cause of death globally. A stroke happens when a person’s blood supply to their brain is interrupted or reduced, causing brain cells to die within minutes. It prevents the brain tissue from getting the oxygen and nutrients that it needs and is responsible for approximately 11% of total deaths.
 
-    The website aims at classifying the heart stroke based on the input parameters like gender, age, various diseases, and smoking status. Since, the project is related to medical domain multiple models were trained and their performance was compared considering the sensitivity, accuracy, as well as specificity scores in the course: CSL2050 Pattern Recognition and Machine Learning under Prof. Richa Singh.
+    The website aims at classifying the stroke based on the input parameters like gender, age, various diseases, and smoking status. Since, the project is related to medical domain multiple models were trained and their performance was compared considering the sensitivity, accuracy, as well as specificity scores in the course: CSL2050 Pattern Recognition and Machine Learning under Prof. Richa Singh.
     """)
 
     with st.sidebar:
